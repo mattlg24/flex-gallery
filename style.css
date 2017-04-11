@@ -12,6 +12,11 @@
   flex-direction: column;*/
 }
 
+.panel p {
+  font-family: 'Amatic SC', cursive;
+  color: white;
+}
+
 .panel1 {
   background-image: url('images/city.jpg');
 }
