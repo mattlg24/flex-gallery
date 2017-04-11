@@ -1,3 +1,33 @@
-body {
-  background-color: blue;
+.panels {
+  display: flex;
+}
+
+.panel {
+  height: 400px;
+  width: 400px;
+  background-size: cover;
+  background-position: center;
+  /*display: flex;
+  flex: 1;
+  flex-direction: column;*/
+}
+
+.panel1 {
+  background-image: url('images/city.jpg');
+}
+
+.panel2 {
+  background-image: url('images/shore.jpg');
+}
+
+.panel3 {
+  background-image: url('images/fog.jpg');
+}
+
+.panel4 {
+  background-image: url('images/canyon.jpg');
+}
+
+.panel5 {
+  background-image: url('images/sunset.jpg');
 }
