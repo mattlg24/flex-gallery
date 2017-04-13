@@ -3,36 +3,71 @@
 }
 
 .panel {
-  height: 400px;
-  width: 400px;
+  transition:
+    font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    background 0.2s;
+  height: 650px;
+  /*width: 650px;*/
   background-size: cover;
   background-position: center;
-  /*display: flex;
+  display: flex;
   flex: 1;
-  flex-direction: column;*/
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
 }
 
 .panel p {
   font-family: 'Amatic SC', cursive;
   color: white;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 0 0 4px black;
 }
 
 .panel1 {
-  background-image: url('images/city.jpg');
+  background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500);
 }
-
 .panel2 {
-  background-image: url('images/shore.jpg');
+  background-image: url(https://source.unsplash.com/1CD3fd8kHnE/1500x1500);
 }
-
 .panel3 {
-  background-image: url('images/fog.jpg');
+  background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
 }
-
 .panel4 {
-  background-image: url('images/canyon.jpg');
+  background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500);
+}
+.panel5 {
+  background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500);
 }
 
-.panel5 {
-  background-image: url('images/sunset.jpg');
+.panel.open {
+  font-size: 40px;
+  flex: 2.5;
+}
+
+/*flex children*/
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  border: 1px solid red;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
 }
